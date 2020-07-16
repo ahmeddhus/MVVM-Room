@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.madarsofttask.model.UserModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/item_shape"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.name}"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@sample/user_data.json/data/name" />
+
+            <TextView
+                android:id="@+id/user_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(user.age)}"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@sample/user_data.json/data/age" />
+
+            <TextView
+                android:id="@+id/user_jobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.jobTitle}"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@sample/user_data.json/data/job_title" />
+
+            <TextView
+                android:id="@+id/user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.gender}"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@sample/user_data.json/data/gender" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
